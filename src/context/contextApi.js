@@ -10,9 +10,9 @@ export const AppContext = (props) => {
     const [selectCategory, setSelectCategory] = useState("New");
     const [mobileMenu, setMobileMenu] = useState(false);
 
-    // useEffect(() => {
-    //     fetchSelectedCategoryData(selectCategory)
-    // }, [selectCategory])
+    useEffect(() => {
+        fetchSelectedCategoryData(selectCategory)
+    }, [selectCategory])
 
 
     const fetchSelectedCategoryData = (query) => {
