@@ -1,8 +1,34 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+// import { AppContext } from "./context/contextApi";
+
+import Header from "./components/Header"
+import Feed from "./components/Feed"
+import SearchResult from "./components/SearchResult"
+import VideoDetails from "./components/VideoDetails"
+import { AppContext } from "./context/contextApi";
 
 const App = () => {
     return (
-        <div className="text-3xl">App</div>
+        // <AppContext>
+        //     <div className="text-3xl">App</div>
+        // </AppContext>
+
+
+        <AppContext>
+            <BrowserRouter>
+                <div className="flex flex-col h-full dark">
+                    <Header />
+                    <Routes>
+                        <Route path="/" exact element={<Feed />} />
+                        <Route path="/searchResult/:searchQuery" element={<SearchResult />} />
+                        <Route path="/video/:id" element={<VideoDetails />} />
+                    </Routes>
+                </div>
+            </BrowserRouter>
+        </AppContext>
+
     );
 }
 
