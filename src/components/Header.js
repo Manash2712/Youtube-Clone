@@ -36,7 +36,7 @@ const Header = () => {
     const pageName = pathname.split("/")?.filter(Boolean)?.[0]
 
     return (
-        <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black">
+        <div className="sticky top-0 z-20 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black">
             {loading && <Loader />}
 
             <div className="flex h-5 items-center">
@@ -91,9 +91,9 @@ const Header = () => {
                     <div className="flex items-center ml-2 justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
                         <FiBell className='text-white text-xl cursor-pointer' />
                     </div>
-                    <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
-                        <img src="https://xsgames.co/randomusers/assets/avatars/pixel/10.jpg" alt="user" />
-                    </div>
+                </div>
+                <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
+                    <img src="https://xsgames.co/randomusers/assets/avatars/pixel/10.jpg" alt="user" />
                 </div>
             </div>
         </div>

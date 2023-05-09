@@ -53,6 +53,7 @@ const VideoDetails = () => {
                             width="100%"
                             height='100%'
                             style={{ backgroundColor: "#000000" }}
+                            playing={true}
                         />
                     </div>
 
@@ -106,7 +107,7 @@ const VideoDetails = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col py-6 px-4 overflow-y-auto lg:w-[350px] xl:w-[400px]">
+                <div className="flex flex-col py-6 px-4 overflow-y-auto lg:w-[350px] xl:w-[400px] sm:no-scrollbar">
                     {relatedVideos?.contents?.map((item, index) => {
                         if (item.type !== "video") return false
                         return (

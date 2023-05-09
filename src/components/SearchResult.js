@@ -21,7 +21,7 @@ const SearchResult = () => {
         setLoading(true)
         fetchDataFromApi(`search/?q=${searchQuery}`).then((res) => {
             console.log(res);
-            setResult(res.contents);
+            setResult(res?.contents);
             setLoading(false)
         })
     }
@@ -31,12 +31,12 @@ const SearchResult = () => {
             <LeftNav />
             <div className="grow w-[100%-240px] h-full overflow-y-auto bg-black">
                 <div className="grid grid-cols-1 gap-2 p-5">
-                    {result.map((item, index) => {
+                    {result?.map((item) => {
                         if (item?.type !== "video") return false;
-                        let video = item.video;
+                        let video = item?.video;
                         return (
                             <SearchResultVideoCard
-                                key={video.videoId}
+                                key={video?.videoId}
                                 video={video}
                             />
                         )
