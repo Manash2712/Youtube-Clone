@@ -10,7 +10,7 @@ const options = {
     },
     // params: { id: 'UxxajLWwzqY' },
     headers: {
-        'X-RapidAPI-Key': process.env.REACT_APP_YOUTUBE_API_KEY,
+        'X-RapidAPI-Key': process.env.REACT_APP_YOUTUBE_API_KEY || '91530014d3mshd8225e9a93911b2p1706b5jsnd59b204be801',
         'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
 };
